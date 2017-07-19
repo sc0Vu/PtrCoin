@@ -7,7 +7,7 @@ Smart contract test project.
 
 install dependencies
 
-    npm install -g truffle testrpc
+    npm install -g ethereumjs-testrpc truffle
 
 start testrpc
 
