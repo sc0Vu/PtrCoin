@@ -1,16 +1,11 @@
 pragma solidity ^0.4.2;
+import './Minter.sol';
 
-contract PtrCoin {
-    address minter;
+contract PtrCoin is Minter {
     mapping (address => uint) public balances;
 
     event Mint(address to, uint amount);
     event Sent(address from, address to, uint amount);
-
-    modifier onlyMinter() {
-        require(msg.sender == minter);
-        _;
-    }
 
     function PtrCoin() {
         minter = msg.sender;
